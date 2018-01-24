@@ -8,4 +8,12 @@ cosas por hacer:
 - leer el trabajo de roxana (funcionamiento de keylogger) capitulo 4.
 - 1er aporte generar una instalación más transparente.
 
+que voy hacer hoy:
+- Configurar mi nueva computadora.
+- Descargar pycharm
+- clonar repositorio de Roxana
+- familiarizarme con el keylogger
+- tratar de instalar.
+
+
 
