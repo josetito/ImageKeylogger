@@ -28,33 +28,40 @@ Hoy tuvimos la primera reunion con Paula y nos dio una introduccion general a lo
 
 El primer paso es definir un ambiente de trabajo basado en virtualenv:
 
+```
 sudo -H pip install virtualenv
 sudo -H pip install virtualenvwrapper
-Agregar las siguientes líneas al final del archivo ~/.bashrc:
+```
 
+Agregar las siguientes líneas al final del archivo ~/.bashrc:
+```
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
 source /usr/local/bin/virtualenvwrapper.sh
 Y refrescar la sesión del shell.
-
 source ~/.bashrc
-Para crear el ambiente virtual:
+```
 
+Para crear el ambiente virtual:
+```
 cd Documents/ImageKeylogger
 mkvirtualenv venvImageKeylogger 
+```
 
-(Para salir del ambiente utilizar deactivate RutasTransitWand y para volver a entrar workon RutasTransitWand)
+(Para salir del ambiente utilizar deactivate #nombreEnv
+ y para volver a entrar workon #nombreEnv)
 
 Generar archivo de requirements.txt:
-
+```
 pip freeze > requirements.txt  
+```
 
 ### Dia 2: Jueves 25 de enero
 
 * Instalacion de Keylogger
-    * validate [sudo pip install validate]
+    * Validate [sudo pip install validate]
     * Xlib [sudo apt-get install python-xlib]
     * Python Image Library (PIL) [sudo apt-get install python-pil]
     * gtk [sudo apt-get install python-gtk2]
@@ -62,16 +69,22 @@ pip freeze > requirements.txt
 
 *  Instalación más fácil para Linux, cree un scrip para que la instalación en linux sea mucho más fácil y sencilla para los usuarios.
 ```
-
 #!/bin/bash
 
+#start
 echo Starting the installation of Keylogger
 
+#update package
 sudo apt-get update
 
-sudo apt-get install validate python-xlib python-pil python-gtk2 python-tk
+#install necessary software
+sudo apt-get -y install python-pip python-xlib python-pil python-gtk2 python-tk git
+sudo pip install validate
 
+#finish
 echo Installation completed
+~                            
+
 ```
 
 * Probar el script. Para probar el script voy hacer una máquina virtual con ubuntu 14.04 para verificar que el script sirva desde esa versión hasta la más reciente.
@@ -85,6 +98,6 @@ echo Installation completed
 * Hice una máquina para probar que el instalador de Linux sirve perfectamente en versiones mayores a 14.04.
     * Baje el instalador el la máquina de test.
     * Clone el proyecto en la máquina test.
-    *  
+    * El instalador funciona correctamente.
 
 
