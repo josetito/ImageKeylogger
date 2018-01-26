@@ -7,12 +7,12 @@
 
 Hoy tuvimos la primera reunion con Paula y nos dio una introduccion general a los tres proyectos.
 
-#### cosas por hacer:
+#### Cosas por hacer:
 - Instalar, probar y familiarizarse con el keylogger 
 - Leer el trabajo de roxana (funcionamiento de keylogger) capitulo 4.
 - Primer aporte generar una instalación más transparente.
 
-#### que voy hacer hoy:
+#### Que voy hacer hoy:
 - Configurar mi nueva computadora.
 - Descargar pycharm.
 - Clonar repositorio de Roxana.
@@ -92,12 +92,21 @@ echo Installation completed
     * Luego instalar el paquete: sudo dpkg -i virtualbox-5.1_5.1.16-113841~Ubuntu~yakkety_amd64.deb
     * Descargar ubuntu 16.04: https://www.ubuntu.com/download/desktop
     
+    
+### Dia 3: viernes 26 de enero
+
+#### Pruebas
+
 * Empezar hacer pruebas de correr el programa ResearchLoggerInterface.py y ResearchLogger.py 
-    * Tengo problemas a la hora de terminar el programa con Ctrl izq + Ctrl der + F12
+    * Tengo problemas a la hora de terminar el programa con Ctrl izq + Ctrl der + F12   
+    
+* Intenté hacer una máquina de virtual box en mi computadora pero no me sirvió debido a que no permite la virtualización.
     
 * Hice una máquina para probar que el instalador de Linux sirve perfectamente en versiones mayores a 14.04.
     * Baje el instalador el la máquina de test.
     * Clone el proyecto en la máquina test.
     * El instalador funciona correctamente.
+    
+* Actualice la bitacora.
 
 
