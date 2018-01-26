@@ -51,7 +51,7 @@ Generar archivo de requirements.txt:
 
 pip freeze > requirements.txt  
 
-### Dia 2
+### Dia 2: Jueves 25 de enero
 
 * Instalacion de Keylogger
 validate [sudo pip install validate]
@@ -74,6 +74,17 @@ sudo apt-get install validate python-xlib python-pil python-gtk2 python-tk
 echo Installation completed
 ```
 
-
+* Probar el script. Para probar el script voy hacer una máquina virtual con ubuntu 14.04 para verificar que el script sirva desde esa versión hasta la más reciente.
+    * Descargar virtual box: wget http://download.virtualbox.org/virtualbox/5.1.16/virtualbox-5.1_5.1.16-113841~Ubuntu~yakkety_amd64.deb
+    * Luego instalar el paquete: sudo dpkg -i virtualbox-5.1_5.1.16-113841~Ubuntu~yakkety_amd64.deb
+    * Descargar ubuntu 16.04: https://www.ubuntu.com/download/desktop
+    
+* Empezar hacer pruebas de correr el programa ResearchLoggerInterface.py y ResearchLogger.py 
+    * Tengo problemas a la hora de terminar el programa con Ctrl izq + Ctrl der + F12
+    
+* Hice una máquina para probar que el instalador de Linux sirve perfectamente en versiones mayores a 14.04.
+    * Baje el instalador el la máquina de test.
+    * Clone el proyecto en la máquina test.
+    *  
 
 
