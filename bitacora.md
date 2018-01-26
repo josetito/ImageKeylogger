@@ -54,11 +54,11 @@ pip freeze > requirements.txt
 ### Dia 2: Jueves 25 de enero
 
 * Instalacion de Keylogger
-validate [sudo pip install validate]
-Xlib [sudo apt-get install python-xlib]
-Python Image Library (PIL) [sudo apt-get install python-pil]
-gtk [sudo apt-get install python-gtk2]
-Tkinter [sudo apt-get install python-tk]
+    * validate [sudo pip install validate]
+    * Xlib [sudo apt-get install python-xlib]
+    * Python Image Library (PIL) [sudo apt-get install python-pil]
+    * gtk [sudo apt-get install python-gtk2]
+    * Tkinter [sudo apt-get install python-tk]
 
 *  Instalación más fácil para Linux, cree un scrip para que la instalación en linux sea mucho más fácil y sencilla para los usuarios.
 ```
