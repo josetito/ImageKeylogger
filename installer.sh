@@ -1,13 +1,6 @@
 #!/bin/bash
 #jrarguedas 
 
-#by
-#    _                               _         
-#   (_)_ _ __ _ _ _ __ _ _  _ ___ __| |__ _ ___
-#   | | '_/ _` | '_/ _` | || / -_) _` / _` (_-<
-#  _/ |_| \__,_|_| \__, |\_,_\___\__,_\__,_/__/
-# |__/             |___/                       
-
 #colors of the letters
 RED=`tput setaf 1`
 GREEN=`tput setaf 2`
@@ -112,10 +105,16 @@ fi
 
 echo ""
 
-
 # OPCIONAL
 #Download Repository
 echo Download Repository.....................
 git clone https://github.com/roxana-lafuente/ResearchLogger.git
 
 #Finish
+
+#by
+#      _                               __       
+#     (_)______ ________ ___ _____ ___/ /__ ____
+#    / / __/ _ `/ __/ _ `/ // / -_) _  / _ `(_-<
+# __/ /_/  \_,_/_/  \_, /\_,_/\__/\_,_/\_,_/___/
+#|___/             /___/                        
