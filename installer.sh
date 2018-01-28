@@ -9,12 +9,12 @@ RESET=`tput sgr0`
 #start instalation
 echo ${GREEN} Starting the installation of Keylogger ${RESET}
 
-#update package
+#update package and solve dependencies
 sudo apt-get update
 sudo apt-get install -f
 sudo apt-get update
 
-#install necessary software
+#INSTALL NECESARY SOFTWARE
 
 #Install python-pip
 echo installing python-pip
@@ -95,22 +95,23 @@ fi
 
 echo ${GREEN} python-tk: $problem5 ${RESET}
 if [ "" == "$problem5" ]; then
+	echo ${RED} Instalation failed ${RESET}
 	echo -e "${RED} There were problems when trying to install python-tk ${RESET}"
+	echo " I could try with: sudo apt-get --force-yes --yes install python-tk"
 fi
 
 echo ${GREEN} git: $problem6 ${RESET}
 if [ "" == "$problem6" ]; then
+	echo ${RED} Instalation failed ${RESET}
 	echo -e "${RED} There were problems when trying to install git ${RESET}"
+	echo " I could try with: sudo apt-get --force-yes --yes install git"
 fi
-
 echo ""
 
 # OPCIONAL
 #Download Repository
 echo Download Repository.....................
 git clone https://github.com/roxana-lafuente/ResearchLogger.git
-
-#Finish
 
 #by
 #      _                               __       
