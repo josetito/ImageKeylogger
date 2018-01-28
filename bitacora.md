@@ -3,7 +3,7 @@
 ## Proyecto procesamiento de imágenes para extracción de texto 
 
 
-# Dia 1: Miercoles 24 de enero
+### Fecha: Miercoles 24 de enero
 
 Hoy tuvimos la primera reunion con Paula y nos dio una introduccion general a los tres proyectos.
 
@@ -58,7 +58,7 @@ Generar archivo de requirements.txt:
 pip freeze > requirements.txt
 ```
 
-### Dia 2: Jueves 25 de enero
+### Fecha: Jueves 25 de enero
 
 * Instalacion de Keylogger
     * Validate [sudo pip install validate]
@@ -91,7 +91,7 @@ echo Installation completed
     * Descargar ubuntu 16.04: https://www.ubuntu.com/download/desktop
     
     
-### Dia 3: viernes 26 de enero
+### Fecha: Viernes 26 de enero
 
 #### Pruebas
 
@@ -108,4 +108,22 @@ echo Installation completed
     
 * Actualice la bitacora.
 
+### Fecha: Domingo 28 de enero
+
+#### Nuevas sugerencias
+* Arreglar script para que valide si fue instalado o no.
+* Arreglar dependencias
+* Que descargue el repositorio de ResearchLogger
+
+- Investigar como se puede atraves de bash poder validar que un paquete este o no instalado en la computadora. 
+    * Encontre que con la funcionalidad de "dpkg" se podria realizar una consulta al sistema y saber si este estaba o no instalado.
+    * Para solucionar el problema de dependencias lo que hago es tratar de arreglar el sistema en caso de que ya tuviera errores con las dependencias y luego aplicó una actualización de paquetes para que no ocurra ningun error a la hora de instalar.
+- Investigar si se podria validar un paquete instalado por pip
+    * No encontre la forma intente con $(pip freeze | grep validate) pero en mi computadora aparece como si no estuviera dentro de los paquetes instalados pero si lo tiene.
+    * Para minimizar el problema de arriba lo que hice fue ya que como utilizo "pip" para instalar el paquete "validate" lo que hago es actualizar pip para que no haya ningun error cuando instale el nuevo paquete.
+- Mostar una salida donde quede más claro que fue lo que occurio.
+    * Necesitaba colocar salidas de warning o de su correcto funcinamiento por lo que la salida se imprime de color rojo cuando es un warning y verde cuando su funcionamiento es correcto.
+
+
+### Fecha: Lunes 29 de enero
 
