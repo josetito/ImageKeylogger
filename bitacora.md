@@ -55,7 +55,7 @@ mkvirtualenv venvImageKeylogger
 
 Generar archivo de requirements.txt:
 ```
-pip freeze > requirements.txt  
+pip freeze > requirements.txt
 ```
 
 ### Dia 2: Jueves 25 de enero
@@ -83,8 +83,6 @@ sudo pip install validate
 
 #finish
 echo Installation completed
-~                            
-
 ```
 
 * Probar el script. Para probar el script voy hacer una máquina virtual con ubuntu 14.04 para verificar que el script sirva desde esa versión hasta la más reciente.
@@ -98,7 +96,8 @@ echo Installation completed
 #### Pruebas
 
 * Empezar hacer pruebas de correr el programa ResearchLoggerInterface.py y ResearchLogger.py 
-    * Tengo problemas a la hora de terminar el programa con Ctrl izq + Ctrl der + F12   
+    * Tengo problemas a la hora de terminar el programa con Ctrl izq + Ctrl der + F12
+    * Estoy analizando el archivo onclickimagecapture.py ya que es acá donde se toman las capturas de pantalla que más adelante voy a necesitar.
     
 * Intenté hacer una máquina de virtual box en mi computadora pero no me sirvió debido a que no permite la virtualización.
     
