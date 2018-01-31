@@ -92,6 +92,8 @@ echo Installation completed
     
     
 ### Fecha: Viernes 26 de enero
+* Se asigno la lectura "Keylogger para el estudio de los procesos cognitivos del traductor"
+    * Lei del libro los primeros dos cápitulos y los anexos técnicos.
 
 #### Pruebas
 
@@ -126,4 +128,60 @@ echo Installation completed
 
 
 ### Fecha: Lunes 29 de enero
+
+* Tarea de iniciar con la herramienta Tesseract
+    utilice los siguientes links para iniciar
+    - https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/
+    - https://www.pyimagesearch.com/2017/07/03/installing-tesseract-for-ocr/
+    - https://www.pyimagesearch.com/wp-content/uploads/2014/02/ImageSearchEngineResourceGuide.pdf
+* Instalar tesseract
+    Primero instale los paquetes
+    ``` 
+        pip install pillow
+        pip install pytesseract
+        pip install cv2
+        pip install opencv-python
+    ```
+    Tuve problemas lo solucione con crear un ambiente virtual, lo que pasaba era que pillow tenia una doble referencia por lo que se necesita hacer el ambiente virtual y que lo unico que este dentro de este ambiente sea este paquete.
+    ```
+        source venv/bin/activate
+        pip install pillow
+        pip install pytesseract
+        pip install cv2
+        pip install opencv-python
+    ```
+
+* Pruebas con la herramienta tesseract-ocr
+    - Primero inicie con la imagen de prueba con letras grandes y la herramienta trabaja muy bien, el resultado fue excelente.
+    - Luego utilice una imagen “salt and pepper” osea que tenga ruido en el fondo de la imagen, esto con el fin de ver si se tiene el mismo resultado.
+    - La siguiente imagen era un codigo el cual tenia letras de colores y a la hora de aplicar la herramienta esta borra las palabras de color.
+    - Hice pruebas con las imagenes de los LOGS del ResearchLogger al pasarlo por la herramienta el resultado no es para nada bueno, fue donde note que existe una necesidad de una buena resolución.
+
+* Mejorar Resolucion
+    * Para observar la resolucion de la imagenes en el servidor utilice:
+    ```
+    identify -ping image.png 
+    ```
+    * Resolucion 150*150, este tipo de imagen carece de informacion en la resolución, al probar este tipo de imagen con la herramienta se pierde información al extraer el texto dando como resultado erroneo. 
+
+    * Resolucion 350*350
+
+    * Resolución 500*250,
+
+
+Nota:
+Pienso que no del todo es responsabilidad de la resoluccion tambien la herramienta tiene dificultades al ser imagenes con colores. Para que el resultado sea bueno deberia de tener fondo blanco y letras negras.
+
+
+### Fecha: Martes 30 de enero
+
+1. hice el archivo ocr.py
+    * Este archivo lo que hace es procesar un archivo con la herramienta tesseract
+
+2. Trate de correr el ejemplo de  pochetti para tratar de encontrar respuestas. 
+
+3. Lei capitulo 3 y 4 keyloger para los procesos del traductor
+
+4. Hice el archivo coordinates.py
+
 
