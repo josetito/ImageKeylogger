@@ -177,11 +177,51 @@ Pienso que no del todo es responsabilidad de la resoluccion tambien la herramien
 
 1. hice el archivo ocr.py
     * Este archivo lo que hace es procesar un archivo con la herramienta tesseract
+    * Tiene tres formas de correr:
+        - python ocr.py --image example_01.png
+        - python ocr.py --image example_01.png --preprocess thresh
+        - python ocr.py --image example_01.png --preprocess blur
 
-2. Trate de correr el ejemplo de  pochetti para tratar de encontrar respuestas. 
+2. Trate de correr el ejemplo de pochetti para tratar de encontrar respuestas. 
+    * Puedo correr solo la mitad del proyecto de pochetti pero me da la parte que necesitaba, la parte del reconocimiento de objetos dentro de la imagen. Con esto puedo darme una idea de como es que se realiza este proceso.
 
-3. Lei capitulo 3 y 4 keyloger para los procesos del traductor
+3. Lei capitulo 3 y 4 keyloger para los procesos del traductor.
 
-4. Hice el archivo coordinates.py
+### Fecha: Miércoles 31 de enero
+1. Reunión con Mariona de Lérida para la instalación de ResearchLogger 
+
+2. Necesito parsear el Log de los clicks.
+    * Lo que hice fue hacerlo con bash. 
+        ```
+        cat /home/tito/Documents/ResearchLogger/logs-tito-1517412618/click_images/clickimagelogfile_tito.txt | cut -f8 -d'|' | cut -f 1-2,5-6 -d',' | tr ' ' ',' > coordinates.log
+        ```
+    * Estoy sacando:
+        ```
+        Xdown,Ydown, Nombre de la imagen, Xup, Yup
+        30,58,20180131_123027_241486_gnome-terminal-server_tito.png,30,58 
+        ```
+
+3. Al parsear el archivo pretendo hacer:
+    * Sacar el texto de las imágenes.
+    * Verificar donde dio click dentro de la imagen.
+    * Verificar si arrastro un click (con esto pretendo saber si subrayo algo o no)
+
+4. Solo hice lo de Verificar donde dio click dentro de la imagen.
+
+### Fecha: Jueves 1 de febrero
+
+1. Estoy pensando si es necesario o no sacar tambien a la hora de parsear:
+    ```
+    Xdown,Ydown, evento, Nombre de la imagen, Xup, Yup, evento
+    30,58,left_down,20180131_123027_241486_gnome-terminal-server_tito.png,30,58,left_up
+
+    cat /home/tito/Documents/ResearchLogger/logs-tito-1517412618/click_images/clickimagelogfile_tito.txt | cut -f8 -d'|' | cut -f 1-2,4-6,8 -d',' | tr ' ' ','
+
+    ```
+2. Voy a verificar si arrastro un click
+    * La idea es correr el ResearchLogger y hacer algunas pruebas subrayando algún texto. Teniendo esas pruebas se le corre el software coordenadas.py que lo que hace es leer el Log de los clicks y saca la informacion de las coordenadas para poder identificarla en las imagenes. Con esto vamos a saber si las coordenadas son distintas de los dos diferentes eventos(presionar click, soltar click).
+
+3. Paula me paso para que leyera este link: https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/
+
 
 
