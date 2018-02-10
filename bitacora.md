@@ -224,4 +224,64 @@ Pienso que no del todo es responsabilidad de la resoluccion tambien la herramien
 3. Paula me paso para que leyera este link: https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/
 
 
+### Fecha: Viernes 2 de febrero
+
+1. Reunion con todos
+
+
+### Fecha: Lunes 5 de febrero
+
+1. Estoy haciendo el fork del proyecto y ordenando las cosas del repo anterior(imageKeylogger)
+
+2. Haciendo pruebas con la biblioteca de pynput para tratar de loguear todos los movimientos posibles y clicks del mouse.
+
+3. Pruebas para definir el crop box. el tamño de la ventana. 
+
+4. pyscreenshot es una biblioteca que toma tanto captura completa como solo un pedacito(crop box).
+
+
+### Fecha: Martes 6 de febrero
+
+1. Hacer un script que capture cualquier movimiento con el mouse.
+
+2. Voy a hacer el mismo script de prueba para windows(con el fin de ver si al cambiar el código tenemos la compatibilidad)
+    * Problemas con el click derecho, cada vez que se utiliza ese click se detiene y ocurre un error
+    * El error se solucionó determinando que era solo si el click derecho se realiza sobre la terminal de windows donde se ejecuta, si es en cualquier otro lugar funciona bien.
+3. Realizar cambios al anteproyecto para que quedé listo para mañana.
+
+
+### Fecha: Miercoles 7 de febrero
+
+1. Empece a realizar cambios en el proyecto de ReseachLogger.
+    * Empece con las constantes
+    * tengo que agregar scroll.
+    * Existe posibilidad de agregar ruta.
+    * Existe posibilidad de agregar status, ej: running
+    * Empiezo a tener muchos errores, estoy viendo otras posibilidades.
+
+
+2. Reunion de seguimiento con Paula. 
+
+
+### Fecha: Jueves 8 de febrero
+
+1. Pienso en hacer otro ResearchLogger con solo la biblioteca pynput. 
+
+2. Realice un mapeo de todos los archivos que debo tocar para realizar los cambios.
+    * Constantes.py
+    * detailLogWritter.py
+    * onClickImageCapture.py
+    * pyxhook.py
+    * ResearchLogger.py
+    * timedScreenshot.py
+
+3. No se que hacer pero voy a seguir.
+
+
+### Fecha: Viernes 9 de febrero
+
+1. Reunion de segimiento con Aurelio
+2. Reunion con Paula.
+3. hice cambios para obtener el process_name y verifique los logs para ver si todo sigue bien.
+4. 
 
