@@ -95,7 +95,7 @@ im.save('cropped_image1', 'jpeg')
 
 # to file
 #ImageGrab.grab_to_file('im.png')
-'''
+x
 
 
 import os
@@ -134,5 +134,14 @@ with keyboard.Listener(
         on_press=on_press,
         on_release=on_release) as listener:
     listener.join()
+'''
+import pyscreenshot as ImageShot
+# fullscreen
+#im=ImageShot.grab()
+#im.show()
 
 
+import pyautogui
+im1 = pyautogui.screenshot()
+im1.show()
+im2 = pyautogui.screenshot('my_screenshot.png')
