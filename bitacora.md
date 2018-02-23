@@ -144,7 +144,7 @@ echo Installation completed
     ```
     Tuve problemas lo solucione con crear un ambiente virtual, lo que pasaba era que pillow tenia una doble referencia por lo que se necesita hacer el ambiente virtual y que lo unico que este dentro de este ambiente sea este paquete.
     ```
-        source venv/bin/activate
+            
         pip install pillow
         pip install pytesseract
         pip install cv2
@@ -234,15 +234,24 @@ Pienso que no del todo es responsabilidad de la resoluccion tambien la herramien
 1. Estoy haciendo el fork del proyecto y ordenando las cosas del repo anterior(imageKeylogger)
 
 2. Haciendo pruebas con la biblioteca de pynput para tratar de loguear todos los movimientos posibles y clicks del mouse.
+Esta herramienta utiliza las funciones:
+    on_click: esta funcion lo que hace es obtener todos los eventos relacionados con la captura de los botones del mouse, se puede saber cuando presiona una tecla y suelta una tecla. tiene las 3 teclas(click izquierdo,derecho y centro)
 
-3. Pruebas para definir el crop box. el tamño de la ventana. 
+    on_move: esta funcion logra captar todos los movimientos del mouse a lo largo de la pantalla, por ejemplo si mueve el mouse sobre una palabra o si no lo esta moviendo.
 
-4. pyscreenshot es una biblioteca que toma tanto captura completa como solo un pedacito(crop box).
+    on_scroll: es la funcion que obtiene el scroll hacia arriba y scroll hacia abajo con esto podemos saber si se encuentra en un documento analizando ciertos detalles o navegando por la web.
+
+3. Pruebas para definir el crop box. el tamño de la ventana.
+    Se necesita calcular un tamaño adecuado o un valor por default que con base en algo podamos determinar cual es el tamaño ideal que deberia de tener la imagenes que se toman para que el post análisis sea más fácil y el resultado sea lo más exacto posible. 
+
+4. pyscreenshot es una biblioteca que toma tanto captura completa, pero también cuenta con la funcionalidad de poder tomar solo un pedacito(crop box).
 
 
 ### Fecha: Martes 6 de febrero
 
 1. Hacer un script que capture cualquier movimiento con el mouse.
+    Para realizar este script utilice la documentación que tiene la biblioteca https://pypi.python.org/pypi/pynput
+    para familiarizarme con la herramienta utilizó los ejemplos por defecto de la herramienta.
 
 2. Voy a hacer el mismo script de prueba para windows(con el fin de ver si al cambiar el código tenemos la compatibilidad)
     * Problemas con el click derecho, cada vez que se utiliza ese click se detiene y ocurre un error
@@ -253,11 +262,13 @@ Pienso que no del todo es responsabilidad de la resoluccion tambien la herramien
 ### Fecha: Miercoles 7 de febrero
 
 1. Empece a realizar cambios en el proyecto de ReseachLogger.
+    Necesito arreglar necesariamente el como se toman las imagenes de la herramienta para que me sea más fácil la captura de elementos dentro de las imagenes por lo que voy a hacer es ver el código por encima para ver que funcionalidades son necesarias y cuales no.
     * Empece con las constantes
-    * tengo que agregar scroll.
-    * Existe posibilidad de agregar ruta.
-    * Existe posibilidad de agregar status, ej: running
-    * Empiezo a tener muchos errores, estoy viendo otras posibilidades.
+    * La funcionalidad de agregar scroll podria ser interesante.
+    * Existe posibilidad de agregar ruta donde el usuario este trabajando.
+    * Existe posibilidad de agregar status del proceso, ej: running 
+
+Empece a ver todo el código y me esta costando entender algunas cosas. tiene muchas clases dentro de los archivos y hay muchas funciones repetidas dentro del código, me estoy fustrando un poco, estoy viendo otras posibilidades. Estoy llegando a pensar que talvez es mejor empezar hacerla desde cero.
 
 
 2. Reunion de seguimiento con Paula. 
@@ -282,6 +293,93 @@ Pienso que no del todo es responsabilidad de la resoluccion tambien la herramien
 
 1. Reunion de segimiento con Aurelio
 2. Reunion con Paula.
-3. hice cambios para obtener el process_name y verifique los logs para ver si todo sigue bien.
-4. 
+
+Lo que voy a empezar hacer es hacer pequeños cambios de algunas funcionalidades y ir testando si todavia apesar de los cambios la herramienta Reseach logger sigue funcionando con normalidad.
+
+3. Empece realizando cambios para obtener el process_name y verifique los logs para ver si todo sigue bien.
+4. Lo del process_name no anda bien. Lo estoy probando dentro de la herramienta pero a la hora de verificar en el log no se esta mostrando nada. 
+
+### Fecha: Lunes 12 y martes 13 de febrero 
+ 
+FERIADO
+
+### Fecha: Miércoles 14 de febrero
+
+1. Estoy realizando un documento que resume lo que he hecho por semana en las semanas anteriores.
+2. Reunion con Aurelio.
+3. La reunión me aclaro mucho las ideas ya que me volvio a poner en claro que es lo que debo hacer y cual es mi objetivo en este proyecto.
+
+
+### Fecha: Jueves 15 de febrero
+
+Hoy voy a testear la toma de screenshots en la Herramienta
+    Cambie la biblioteca de tomar los screenshot por pyautogui uso lo mismo que la biblioteca anterior pero esta tiene una mayor compatibilidad con la biblioteca cv2 por lo que me va ayudar más cuando tenga que hacer procesamiento de imagenes.
+
+
+### Fecha: Viernes 16 de febrero
+
+1. Estoy tratando de asegurar de que todas las imagenes que se tomen, su respectivo x,y quede dentro del cropbox. El asegurarlo se me esta haciendo dificil ya que depende del lugar donde se tome queda fuera de la pantalla. Quiero no cambiar todo el código que ya se tiene para esta funcionalidad trató de reutilizarlo.
+Voy a tratar de buscar una biblioteca que lo haga.
+
+2. Cree el archivo saveimage.py
+    La idea detras de este script es poder hacer un caso de prueba donde yo pueda tener a partir de un x,y que yo establezca tomar el respectivo screnshot y un cropbox del mmismo tratando de simular lo que ocurre en la herramienta pero sin tener que correr las otras funcionalidades de la herramienta y otros errores que no nos interesan.
+
+
+### Fecha: Lunes 19 de febrero 
+
+1. Hoy voy a cambiar para que las capturas completas de pantalla se hagan con la nueva biblioteca.
+2. Las capturas de pantalla(pantalla total) estan listas.
+3. Los procesos no se van a poder cambiar a este formato, El problema es que el evento no trae el id o el proceso actual por lo que no encuentro una manera de hacer este proceso generico para que funcione multiṕlataforma.
+
+```
+p = psutil.Process(os.getpid())
+p.name()
+
+```
+
+### Fecha: Martes 20 de febrero 
+
+1. Hoy termine de modificar todas las funciones de las imagenes, las imagenes ya estan perfectas para empezar analizarlas.
+2. Realice modificaciones al saveimage.py
+
+Voy a dejar hasta aca los cambios del research logger y voy a empezar con el analisis de las imagenes porque siento que me estoy atrasando un poco. si queda tiempo realizo los respectivos cambios.
+
+### Fecha: Miércoles 21 de febrero
+
+1. Reunión con Paula y con los demás compañeros analizamos en conjunto los problemas que teniamos cada uno y nos haciamos sugerencias.
+
+2. Tuve una conversacion con Paula y le dije sobre que me iba a enfocar en lo de las imágenes, que iba a dejar un poco de lado lo de agregar nuevas funcionalidades y fijamos un nuevo norte.
+
+Hablamos sobre los paper y dijimmos lo que pensabamos hacer en las próximas semanas ya que Paula no va a estar en el país.
+
+NECESITO SABER EN QUE AMBITO PUEDE SER BUENO ENFOCAR MI INVESTIGACION
+    * buscar plageo
+
+
+3. Le dije a paula que necesitaba ir conociendo las actividades que realizaba Laura para sacar información observardo las imágenes.
+    + Me dio un borrador de la tesis que esta realizando Laura para ser master en traductología
+
+
+### Fecha: Jueves 22 de febrero
+1. Hoy me voy a dedicar a leer la tesis de Laura
+
+2. Cosas importantes de la tesis
+    + Es muy importante el uso de la herramienta OmegaT
+        * cuenta con 10 pasos que todo traductor necesita hacer dentro de esta herramienta se podria utilizar el analisis de imagenes para reconocer estos pasos.
+        *Reconocer cuando trabaja en LibreOffice writter
+        * REconocimiento de archivos (puede ser tambien la extención)
+        *Es importante los 18 screen de analisis 
+        * Lograr saber cuando un usuario se da cuenta de un error y lo corrige
+        * Encontrar segmentos sin traducir dentro de la herramienta(figura 31 muestra 2)
+        * verificacion de etiquetas (vendria siendo parte de los pasos)
+        *Crear documentos finales
+        * Activación del glosario (screenshot)
+        * Activar coincidencias parciales (screenshot)
+        * activar Diccionario (screenshot)
+        * Subrayado de texto
+        
+
+3. Le ayude con algunas funcionalidades a Walter
+    * Verificar que las flechas funcionen correctamente en Linux
+    * Que el tab se captado por la herramienta
 
