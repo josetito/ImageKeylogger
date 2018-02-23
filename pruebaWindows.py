@@ -24,20 +24,13 @@ def on_click(x, y, button, pressed):
         if button == 'Button.middle':
             print('Mousebutton_middle {0} at {1} Release'.  format(x,y))
 
-def on_scroll(x, y, dx, dy):
-    print('Scrolled {0} at {1}'.format(
-        'down' if dy < 0 else 'up',
-        (x, y)))
 
+def on_scroll( x, y, dx, dy):
+    if dy < 0:
+        print('Scrolled {0} at {1} down'.format(x, y))
+    else:
+        print('Scrolled {0} at {1} up'.format(x, y))
 
-# Collect events until released
-with mouse.Listener(
-        on_move=on_move,
-        on_click=on_click, 
-        on_scroll=on_scroll) as listener:
-    listener.join()
-
-'''
 
 print "Primer imagen.............."
 # size is width/height
@@ -88,4 +81,3 @@ with mouse.Listener(
         on_click=on_click,
         on_scroll=on_scroll) as listener:
     listener.join()
-'''
