@@ -6,9 +6,13 @@ import subprocess
 #Yup, Ydown = 0
 
 nameLog = "coordinates.log"
-ImageDirectory = "/home/tito/Documents/ResearchLogger/logs-tito-1517412618/click_images/"
+ImageDirectory = "/home/tito/Documents/pruebas/ResearchLogger/logs-tito-1518708115/click_images/"
 
-bashCommand = "cat /home/tito/Documents/ResearchLogger/logs-tito-1517412618/click_images/clickimagelogfile_tito.txt | cut -f8 -d'|' | cut -f 1-2,5-6 -d',' | tr ' ' ',' > " +nameLog+ ""
+bashCommand = "cat /home/tito/Documents/pruebas/ResearchLogger/logs-tito-1518708115/click_images/clickimagelogfile_tito.txt | cut -f8 -d'|' | cut -f 1-2,5-6 -d',' | tr ' ' ',' > " +nameLog+ ""
+#mejorada
+# cat /home/tito/Documents/ResearchLogger/logs-tito-1517412618/click_images/clickimagelogfile_tito.txt | cut -f8 -d'|' | cut -f 1-2,4-6,8-9 -d',' | tr ' ' ','
+
+
 
 p1 = subprocess.Popen(['bash','-c', bashCommand])
 p1.wait()
