@@ -1,5 +1,11 @@
 from pynput import mouse
 
+'''
+Script que captura todos los movimientos del mouse. La hice para intentar cambiar
+la forma en como se hace actualmente en la herramienta Research Logger
+'''
+
+
 def on_move(x, y):
     print('Pointer moved to {0}'.format(
         (x, y)))

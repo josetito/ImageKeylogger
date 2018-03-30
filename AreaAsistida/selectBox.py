@@ -22,7 +22,7 @@ def get_screen_size():
 
 # execute bash command and generate the nameLog
 def executeCommand(file):
-    bashCommand = "cat "+file+" | cut -f8 -d'|' | cut -f 1-2,4-6,8-9 -d',' | tr ' ' ',' > " + nameLog + ""
+    bashCommand = "cat "+file+" | cut -f8 -d'|' | tr ' ' '\n' | sed '/^$/d' | paste -s -d'\t\n' > " + nameLog + ""
     p1 = subprocess.Popen(['bash','-c', bashCommand])
     p1.wait()
 
@@ -57,10 +57,14 @@ def cutImage(img,ImageDirectory):
 
     cv2.imwrite("seleccion.png", imCrop)
 
+    finalimg = Image.fromarray(imCrop)
+
+    return finalimg
+
 # recognize the text in the image with pytesseract
-def recognizeText():
+def recognizeText(img):
     # Recognize text with tesseract for python
-    result = pytesseract.image_to_string(Image.open("seleccion.png"))
+    result = pytesseract.image_to_string(img)
 
     print "Realizo click en --> " + result
 
@@ -86,9 +90,15 @@ def main(nameLog):
     executeCommand(file)
     file = open(nameLog, "r")
     for line in file.readlines():
-        Xdown, Ydown, click_down, image_down, Xup, Yup, click_up, image_up, enter = line.split(",")
-        findCoordinates(image_down,image_up,ImageDirectory)
-        cutImage(image_down,ImageDirectory)
-        recognizeText()
+        info = line.split("\t")
+        if len(info)==2:
+            infoImage1 = info[0]
+            infoImage2 = info[1].rstrip("\n")
+            Xdown, Ydown, miliseg_down, click_down, image_down = infoImage1.split(",")
+            Xup, Yup, miliseg_up, click_up, image_up = infoImage2.split(",")
+            findCoordinates(image_down,image_up,ImageDirectory)
+            recognizeText(cutImage(image_down,ImageDirectory))
+        else:
+            print "tiene una mas"
 
 main(nameLog)

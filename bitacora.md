@@ -546,3 +546,131 @@ channels = cv.text.computeNMChannels(img)
         + agregar un diagrama de metodologia
 
 3. 
+
+
+### Fecha: Lunes 12 de marzo
+
+1. Solucione los problemas que tengo con gtk instalando
+'''
+ sudo apt-get install python-gtk2
+'''
+
+2. Realice un script llamado selectBox.py para probar como seleccionar una parte de la imagen
+
+3. Realice una carpeta para hacer una prueba donde se seleccione el area que se quiere capturar
+'''
+    AreaAsistida/
+        coordinates.log
+        seleccion.png
+        selectBox.py
+'''
+cordinates.log es el archivo en el que simplifico la cantidad de cosas que quiero del LOG original.
+seleccion.png es el resultado que se produce al humano ir realizando cada recorte.
+SelectBox es el código que logra hacer que todo pueda funcionar.
+
+el ejemplo de area asistida quedo listo.
+
+
+### Fecha: Martes 13 de marzo
+
+1. Hoy le enseñe a Paula la solucion propuesta Asistida
+
+2. Llegamos a una conclusion luego de ver algunos casos, las imagenes con click_up solo son importantes cuando se realiza un subrayado en la imagen por lo que sugerimos que puede ser un camino viable para hacer el problema un poco más pequeño.
+
+3. Realice una prueba con Research logger, la idea es iniciar libre office y escribir palabras y luego subrayarlas con el fin de generar los logs con estas caracteristicas. 
+    * Problema: El archivo log no contiene las imagenes. (no tiene todas las imagenes)
+
+4. Termine las correciones del primer informe.
+
+
+### Fecha: Miércoles 14 de marzo
+
+1. Realice el script diffImage.py este da como resultado la diferencia entre dos imagenes.
+
+2. Estaba teniendo un error a la hora de leer el  archivo del log y estaba perdiendo lineas ya que cada entrada no viene como una linea sino que cada vez que utiliza un programa es una linea. Por lo que el comando que uso para sacar solo lo que necesito va a cambiar.
+'''
+anterior  = "cat "+file+" | cut -f8 -d'|' | cut -f 1-2,4-6,8-9 -d',' | tr ' ' ',' > " + nameLog + ""
+
+nuevo = "cat "+file+" | cut -f8 -d'|' | tr ' ' '\n' | sed '/^$/d' > " + nameLog + ""
+
+y luego para que en click down y click up queden en una sola linea se agrgará esto:
+
+nuevoMod = "cat "+file+" | cut -f8 -d'|' | tr ' ' '\n' | sed '/^$/d' | paste -s -d'\t\n' > " + nameLog + ""
+
+
+'''
+
+3. Aplique los nuevos cambios a selectBox.py la que es asistida.
+
+4. De un total de 38 imágenes tomadas se encuentran en el archivo untotal de 34
+
+
+### fecha Jueves 15 de marzo
+
+Estoy intentando mejorar la diferencia entre imagenes para poder sacar el texto que se encuantre entre ellas.
+
+Esto lo estoy haciendo para añadirlo a la parte del analisis de imagenes cuando se realiza un subrayado.
+
+### fecha Viernes 16 de marzo
+
+sigo perdido.
+
+1. Logre obtener una imagen unicamente con la diferencia de las imagenes. Lo bueno de esto es que esta con el color original de la imagen original.
+
+imagenOriginal - imagenCambio = imagenDiferencia 
+
+
+### fecha Lunes 19 de marzo
+
+1. Estoy tratando de agregarle tesseract a lo logrado el viernes pero no se porque no esta funcionando.
+
+
+2. Voy a explorar algun otro modo de extraer el texto. 
+
+3. Voy a probar textract
+http://textract.readthedocs.io/en/stable/installation.html
+
+4. voy a probar con pyocr
+sudo pip install pyocr
+https://github.com/openpaperwork/pyocr
+
+### fecha Lunes 20 de marzo
+
+1. instale el lang español
+'''
+ sudo apt-get install tesseract-ocr-spa
+'''
+2. instalar ingles
+'''
+ sudo apt-get install tesseract-ocr-eng
+'''
+
+
+links:
+
+https://www.pyimagesearch.com/2016/02/08/opencv-shape-detection/
+https://www.pyimagesearch.com/2016/02/15/determining-object-color-with-opencv/
+https://www.pyimagesearch.com/2016/02/08/opencv-shape-detection/
+https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/
+https://mmeysenburg.github.io/image-processing/08-contours/
+https://www.pyimagesearch.com/2015/02/09/removing-contours-image-using-python-opencv/
+https://henrydangprg.com/2016/06/26/color-detection-in-python-with-opencv/
+https://henrydangprg.com/2016/12/11/canny-edge-detection-in-python-with-opencv/
+https://www.blog.pythonlibrary.org/2016/10/11/how-to-create-a-diff-of-an-image-in-python/
+https://robologs.net/2016/04/21/detectar-diferencias-entre-dos-imagenes-con-opencv-y-python/
+https://codeyarns.com/2015/08/20/how-to-apply-mask-in-opencv/
+https://stackoverflow.com/questions/47062216/replace-mask-with-original-image-opencv-python
+http://www.learnopencv.com/blob-detection-using-opencv-python-c/
+http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_blob.html
+http://layer0.authentise.com/object-detection-using-blob-tracing.html
+http://what-when-how.com/introduction-to-video-and-image-processing/blob-analysis-introduction-to-video-and-image-processing-part-1/
+https://stackoverflow.com/questions/46003033/extract-contours-from-bounding-box
+https://docs.adaptive-vision.com/current/studio/machine_vision_guide/BlobAnalysis.html
+https://www.learnopencv.com/how-to-select-a-bounding-box-roi-in-opencv-cpp-python/
+
+compare tesseract, ocr
+https://medium.com/@winston.smith.spb/python-ocr-for-pdf-or-compare-textract-pytesseract-and-pyocr-acb19122f38c
+
+porque use png
+https://docs.adaptive-vision.com/current/studio/machine_vision_guide/ImageProcessing.html
+

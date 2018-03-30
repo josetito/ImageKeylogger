@@ -5,6 +5,9 @@ import argparse
 import cv2
 import os
 
+'''
+Prueba con pytesseract en la que trato de obtener el texto de una imagen
+'''
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()

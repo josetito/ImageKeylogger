@@ -1,4 +1,7 @@
 from pynput import keyboard
+'''
+Prueba de la biblioteca para ver como se comportaba con el teclado
+'''
 
 def on_press(key):
     try:

@@ -1,0 +1,1533 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>bitacora</title></head><body><article class="markdown-body"><h1 id="bitacora"><a name="user-content-bitacora" href="#bitacora" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Bitácora</h1>
+<h2 id="proyecto-procesamiento-de-imagenes-para-extraccion-de-texto"><a name="user-content-proyecto-procesamiento-de-imagenes-para-extraccion-de-texto" href="#proyecto-procesamiento-de-imagenes-para-extraccion-de-texto" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Proyecto procesamiento de imágenes para extracción de texto</h2>
+<h3 id="fecha-miercoles-24-de-enero"><a name="user-content-fecha-miercoles-24-de-enero" href="#fecha-miercoles-24-de-enero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Miércoles 24 de enero</h3>
+<p>Hoy tuvimos la primera reunión con Paula y nos dio una introducción general a los tres proyectos.</p>
+<h4 id="cosas-por-hacer"><a name="user-content-cosas-por-hacer" href="#cosas-por-hacer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cosas por hacer:</h4>
+<ul>
+<li>Instalar, probar y familiarizarse con el keylogger </li>
+<li>Leer el trabajo de Roxana (funcionamiento de keylogger) capitulo 4.</li>
+<li>Primer aporte generar una instalación más transparente.</li>
+</ul>
+<h4 id="que-voy-hacer-hoy"><a name="user-content-que-voy-hacer-hoy" href="#que-voy-hacer-hoy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Que voy hacer hoy:</h4>
+<ul>
+<li>Configurar mi nueva computadora.</li>
+<li>Descargar pycharm.</li>
+<li>Clonar repositorio de Roxana.</li>
+<li>Tratar de instalar el keylogger.</li>
+<li>Familiarizarme con el keylogger.</li>
+</ul>
+<h3 id="informe-de-trabajo"><a name="user-content-informe-de-trabajo" href="#informe-de-trabajo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Informe de Trabajo</h3>
+<ul>
+<li>Se instalo ubuntu en la máquina que me presto Paula para desarrollar el proyecto, además configure las llaves ssh para posteriormente trabajar con git.</li>
+<li>Se descargo y se instalo el IDE PYCHARM ya que al ser un proyecto a desarrollar en python, esta herramienta me va ayudar a desarrollar más rápido mi código.<ul>
+<li>Lo descargue del siguiente link: <a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a></li>
+</ul>
+</li>
+<li>Clone el proyecto de Roxana del link: <a href="https://github.com/roxana-lafuente/ResearchLogger.git">https://github.com/roxana-lafuente/ResearchLogger.git</a></li>
+<li>Crear el ambiente virtual de trabajo con los siguientes pasos:</li>
+</ul>
+<p>El primer paso es definir un ambiente de trabajo basado en virtualenv:</p>
+<pre><code>sudo -H pip install virtualenv
+sudo -H pip install virtualenvwrapper
+</code></pre>
+
+<p>Agregar las siguientes líneas al final del archivo ~/.bashrc:<br />
+<pre><code>export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev
+source /usr/local/bin/virtualenvwrapper.sh
+Y refrescar la sesión del shell.
+source ~/.bashrc
+</code></pre></p>
+<p>Para crear el ambiente virtual:<br />
+<pre><code>cd Documents/ImageKeylogger
+mkvirtualenv venvImageKeylogger 
+</code></pre></p>
+<p>(Para salir del ambiente utilizar deactivate #nombreEnv<br />
+ y para volver a entrar workon #nombreEnv)</p>
+<p>Generar archivo de requirements.txt:<br />
+<pre><code>pip freeze &gt; requirements.txt
+</code></pre></p>
+<h3 id="fecha-jueves-25-de-enero"><a name="user-content-fecha-jueves-25-de-enero" href="#fecha-jueves-25-de-enero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Jueves 25 de enero</h3>
+<ul>
+<li>
+<p>Instalación de Keylogger</p>
+<ul>
+<li>Validate [sudo pip install validate]</li>
+<li>Xlib [sudo apt-get install python-xlib]</li>
+<li>Python Image Library (PIL) [sudo apt-get install python-pil]</li>
+<li>gtk [sudo apt-get install python-gtk2]</li>
+<li>Tkinter [sudo apt-get install python-tk]</li>
+</ul>
+</li>
+<li>
+<p>Instalación más fácil para Linux, cree un script para que la instalación en linux sea mucho más fácil y sencilla para los usuarios.<br />
+<pre><code>#!/bin/bash
+
+#start
+echo Starting the installation of Keylogger
+
+#update package
+sudo apt-get update
+
+#install necessary software
+sudo apt-get -y install python-pip python-xlib python-pil python-gtk2 python-tk git
+sudo pip install validate
+
+#finish
+echo Installation completed
+</code></pre></p>
+</li>
+<li>
+<p>Probar el script. Para probar el script voy hacer una máquina virtual con ubuntu 14.04 para verificar que el script sirva desde esa versión hasta la más reciente.</p>
+<ul>
+<li>Descargar virtual box: wget <a href="http://download.virtualbox.org/virtualbox/5.1.16/virtualbox-5.1_5.1.16-113841~Ubuntu~yakkety_amd64.deb">http://download.virtualbox.org/virtualbox/5.1.16/virtualbox-5.1_5.1.16-113841~Ubuntu~yakkety_amd64.deb</a></li>
+<li>Luego instalar el paquete: sudo dpkg -i virtualbox-5.1_5.1.16-113841~Ubuntu~yakkety_amd64.deb</li>
+<li>Descargar ubuntu 16.04: <a href="https://www.ubuntu.com/download/desktop">https://www.ubuntu.com/download/desktop</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="fecha-viernes-26-de-enero"><a name="user-content-fecha-viernes-26-de-enero" href="#fecha-viernes-26-de-enero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Viernes 26 de enero</h3>
+<ul>
+<li>Se asigno la lectura &ldquo;Keylogger para el estudio de los procesos cognitivos del traductor&rdquo;<ul>
+<li>Leí del libro los primeros dos capítulos y los anexos técnicos.</li>
+</ul>
+</li>
+</ul>
+<h4 id="pruebas"><a name="user-content-pruebas" href="#pruebas" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pruebas</h4>
+<ul>
+<li>
+<p>Empezar hacer pruebas de correr el programa ResearchLoggerInterface.py y ResearchLogger.py </p>
+<ul>
+<li>Tengo problemas a la hora de terminar el programa con Ctrl izq + Ctrl der + F12</li>
+<li>Estoy analizando el archivo onclickimagecapture.py ya que es acá donde se toman las capturas de pantalla que más adelante voy a necesitar.</li>
+</ul>
+</li>
+<li>
+<p>Intenté hacer una máquina de virtualbox en mi computadora pero no me sirvió debido a que no permite la virtualización.</p>
+</li>
+<li>
+<p>Hice una máquina para probar que el instalador de Linux sirve perfectamente en versiones mayores a 14.04.</p>
+<ul>
+<li>Baje el instalador el la máquina de test.</li>
+<li>Clone el proyecto en la máquina test.</li>
+<li>El instalador funciona correctamente.</li>
+</ul>
+</li>
+<li>
+<p>Actualice la bitácora.</p>
+</li>
+</ul>
+<h3 id="fecha-domingo-28-de-enero"><a name="user-content-fecha-domingo-28-de-enero" href="#fecha-domingo-28-de-enero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Domingo 28 de enero</h3>
+<h4 id="nuevas-sugerencias"><a name="user-content-nuevas-sugerencias" href="#nuevas-sugerencias" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Nuevas sugerencias</h4>
+<ul>
+<li>Arreglar script para que valide si fue instalado o no.</li>
+<li>Arreglar dependencias</li>
+<li>
+<p>Que descargue el repositorio de ResearchLogger</p>
+</li>
+<li>
+<p>Investigar como se puede a través de bash poder validar que un paquete este o no instalado en la computadora. </p>
+<ul>
+<li>Encontré que con la funcionalidad de &ldquo;dpkg&rdquo; se podría realizar una consulta al sistema y saber si este estaba o no instalado.</li>
+<li>Para solucionar el problema de dependencias lo que hago es tratar de arreglar el sistema en caso de que ya tuviera errores con las dependencias y luego aplicó una actualización de paquetes para que no ocurra ningún error a la hora de instalar.</li>
+</ul>
+</li>
+<li>Investigar si se podría validar un paquete instalado por pip<ul>
+<li>No encontré la forma intente con $(pip freeze | grep validate) pero en mi computadora aparece como si no estuviera dentro de los paquetes instalados pero si lo tiene.</li>
+<li>Para minimizar el problema de arriba lo que hice fue ya que como utilizo &ldquo;pip&rdquo; para instalar el paquete &ldquo;validate&rdquo; lo que hago es actualizar pip para que no haya ningún error cuando instale el nuevo paquete.</li>
+</ul>
+</li>
+<li>Mostar una salida donde quede más claro que fue lo que ocurrió.<ul>
+<li>Necesitaba colocar salidas de warning o de su correcto funcionamiento por lo que la salida se imprime de color rojo cuando es un warning y verde cuando su funcionamiento es correcto.</li>
+</ul>
+</li>
+</ul>
+<h3 id="fecha-lunes-29-de-enero"><a name="user-content-fecha-lunes-29-de-enero" href="#fecha-lunes-29-de-enero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Lunes 29 de enero</h3>
+<ul>
+<li>Tarea de iniciar con la herramienta Tesseract<br />
+    utilice los siguientes links para iniciar<ul>
+<li><a href="https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/">https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/</a></li>
+<li><a href="https://www.pyimagesearch.com/2017/07/03/installing-tesseract-for-ocr/">https://www.pyimagesearch.com/2017/07/03/installing-tesseract-for-ocr/</a></li>
+<li><a href="https://www.pyimagesearch.com/wp-content/uploads/2014/02/ImageSearchEngineResourceGuide.pdf">https://www.pyimagesearch.com/wp-content/uploads/2014/02/ImageSearchEngineResourceGuide.pdf</a></li>
+</ul>
+</li>
+<li>
+<p>Instalar tesseract<br />
+    Primero instale los paquetes<br />
+    <pre><code>    pip install pillow
+    pip install pytesseract
+    pip install cv2
+    pip install opencv-python
+</code></pre><br />
+    Tuve problemas lo solucione con crear un ambiente virtual, lo que pasaba era que pillow tenia una doble referencia por lo que se necesita hacer el ambiente virtual y que lo único que este dentro de este ambiente sea este paquete.<br />
+    <pre><code>
+    pip install pillow
+    pip install pytesseract
+    pip install cv2
+    pip install opencv-python
+</code></pre></p>
+</li>
+<li>
+<p>Pruebas con la herramienta tesseract-ocr</p>
+<ul>
+<li>Primero inicie con la imagen de prueba con letras grandes y la herramienta trabaja muy bien, el resultado fue excelente.</li>
+<li>Luego utilice una imagen “salt and pepper” osea que tenga ruido en el fondo de la imagen, esto con el fin de ver si se tiene el mismo resultado.</li>
+<li>La siguiente imagen era un código el cual tenia letras de colores y a la hora de aplicar la herramienta esta borra las palabras de color.</li>
+<li>Hice pruebas con las imágenes de los LOGS del ResearchLogger al pasarlo por la herramienta el resultado no es para nada bueno, fue donde note que existe una necesidad de una buena resolución.</li>
+</ul>
+</li>
+<li>
+<p>Mejorar Resolución</p>
+<ul>
+<li>Para observar la resolución de la imágenes en el servidor utilice:<br />
+<pre><code>identify -ping image.png 
+</code></pre></li>
+<li>
+<p>Resolución 150*150, este tipo de imagen carece de información en la resolución, al probar este tipo de imagen con la herramienta se pierde información al extraer el texto dando como resultado erróneo. </p>
+</li>
+<li>
+<p>Resolucion 350*350</p>
+</li>
+<li>
+<p>Resolución 500*250,</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Nota:<br />
+Pienso que no del todo es responsabilidad de la resolución también la herramienta tiene dificultades al ser imágenes con colores. Para que el resultado sea bueno debería de tener fondo blanco y letras negras.</p>
+<h3 id="fecha-martes-30-de-enero"><a name="user-content-fecha-martes-30-de-enero" href="#fecha-martes-30-de-enero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Martes 30 de enero</h3>
+<ol>
+<li>
+<p>hice el archivo ocr.py</p>
+<ul>
+<li>Este archivo lo que hace es procesar un archivo con la herramienta tesseract</li>
+<li>Tiene tres formas de correr:<ul>
+<li>python ocr.py &ndash;image example_01.png</li>
+<li>python ocr.py &ndash;image example_01.png &ndash;preprocess thresh</li>
+<li>python ocr.py &ndash;image example_01.png &ndash;preprocess blur</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Trate de correr el ejemplo de pochetti para tratar de encontrar respuestas. </p>
+<ul>
+<li>Puedo correr solo la mitad del proyecto de pochetti pero me da la parte que necesitaba, la parte del reconocimiento de objetos dentro de la imagen. Con esto puedo darme una idea de como es que se realiza este proceso.</li>
+</ul>
+</li>
+<li>
+<p>Leí capitulo 3 y 4 keyloger para los procesos del traductor.</p>
+</li>
+</ol>
+<h3 id="fecha-miercoles-31-de-enero"><a name="user-content-fecha-miercoles-31-de-enero" href="#fecha-miercoles-31-de-enero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Miércoles 31 de enero</h3>
+<ol>
+<li>
+<p>Reunión con Mariona de Lérida para la instalación de ResearchLogger </p>
+</li>
+<li>
+<p>Necesito parsear el Log de los clicks.</p>
+<ul>
+<li>Lo que hice fue hacerlo con bash. <br />
+    <pre><code>cat /home/tito/Documents/ResearchLogger/logs-tito-1517412618/click_images/clickimagelogfile_tito.txt | cut -f8 -d'|' | cut -f 1-2,5-6 -d',' | tr ' ' ',' &gt; coordinates.log
+</code></pre></li>
+<li>Estoy sacando:<br />
+    <pre><code>Xdown,Ydown, Nombre de la imagen, Xup, Yup
+30,58,20180131_123027_241486_gnome-terminal-server_tito.png,30,58 
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>Al parsear el archivo pretendo hacer:</p>
+<ul>
+<li>Sacar el texto de las imágenes.</li>
+<li>Verificar donde dio click dentro de la imagen.</li>
+<li>Verificar si arrastro un click (con esto pretendo saber si subrayo algo o no)</li>
+</ul>
+</li>
+<li>
+<p>Solo hice lo de Verificar donde dio click dentro de la imagen.</p>
+</li>
+</ol>
+<h3 id="fecha-jueves-1-de-febrero"><a name="user-content-fecha-jueves-1-de-febrero" href="#fecha-jueves-1-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Jueves 1 de febrero</h3>
+<ol>
+<li>Estoy pensando si es necesario o no sacar también a la hora de parsear:<br />
+    <pre><code>Xdown,Ydown, evento, Nombre de la imagen, Xup, Yup, evento
+30,58,left_down,20180131_123027_241486_gnome-terminal-server_tito.png,30,58,left_up
+
+cat /home/tito/Documents/ResearchLogger/logs-tito-1517412618/click_images/clickimagelogfile_tito.txt | cut -f8 -d'|' | cut -f 1-2,4-6,8 -d',' | tr ' ' ','
+
+</code></pre></li>
+<li>
+<p>Voy a verificar si arrastro un click</p>
+<ul>
+<li>La idea es correr el ResearchLogger y hacer algunas pruebas subrayando algún texto. Teniendo esas pruebas se le corre el software coordenadas.py que lo que hace es leer el Log de los clicks y saca la información de las coordenadas para poder identificarla en las imágenes. Con esto vamos a saber si las coordenadas son distintas de los dos diferentes eventos(presionar click, soltar click).</li>
+</ul>
+</li>
+<li>
+<p>Paula me paso para que leyera este link: <a href="https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/">https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/</a></p>
+</li>
+</ol>
+<h3 id="fecha-viernes-2-de-febrero"><a name="user-content-fecha-viernes-2-de-febrero" href="#fecha-viernes-2-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Viernes 2 de febrero</h3>
+<ol>
+<li>Reunión con todos.</li>
+</ol>
+<h3 id="fecha-lunes-5-de-febrero"><a name="user-content-fecha-lunes-5-de-febrero" href="#fecha-lunes-5-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Lunes 5 de febrero</h3>
+<ol>
+<li>
+<p>Estoy haciendo el fork del proyecto y ordenando las cosas del repositorio anterior(imageKeylogger)</p>
+</li>
+<li>
+<p>Haciendo pruebas con la biblioteca de pynput para tratar de loguear todos los movimientos posibles y clicks del mouse.<br />
+Esta herramienta utiliza las funciones:<br />
+    on_click: esta función lo que hace es obtener todos los eventos relacionados con la captura de los botones del mouse, se puede saber cuando presiona una tecla y suelta una tecla. tiene las 3 teclas(click izquierdo,derecho y centro)</p>
+<p>on_move: esta función logra captar todos los movimientos del mouse a lo largo de la pantalla, por ejemplo si mueve el mouse sobre una palabra o si no lo esta moviendo.</p>
+<p>on_scroll: es la función que obtiene el scroll hacia arriba y scroll hacia abajo con esto podemos saber si se encuentra en un documento analizando ciertos detalles o navegando por la web.</p>
+</li>
+<li>
+<p>Pruebas para definir el cropbox. el tamaño de la ventana.<br />
+    Se necesita calcular un tamaño adecuado o un valor por default que con base en algo podamos determinar cual es el tamaño ideal que debería de tener la imágenes que se toman para que el post análisis sea más fácil y el resultado sea lo más exacto posible. </p>
+</li>
+<li>
+<p>pyscreenshot es una biblioteca que toma tanto captura completa, pero también cuenta con la funcionalidad de poder tomar solo un pedacito(cropbox).</p>
+</li>
+</ol>
+<h3 id="fecha-martes-6-de-febrero"><a name="user-content-fecha-martes-6-de-febrero" href="#fecha-martes-6-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Martes 6 de febrero</h3>
+<ol>
+<li>
+<p>Hacer un script que capture cualquier movimiento con el mouse.<br />
+    Para realizar este script utilice la documentación que tiene la biblioteca <a href="https://pypi.python.org/pypi/pynput">https://pypi.python.org/pypi/pynput</a><br />
+    para familiarizarme con la herramienta utilizó los ejemplos por defecto de la herramienta.</p>
+</li>
+<li>
+<p>Voy a hacer el mismo script de prueba para windows(con el fin de ver si al cambiar el código tenemos la compatibilidad)</p>
+<ul>
+<li>Problemas con el click derecho, cada vez que se utiliza ese click se detiene y ocurre un error</li>
+<li>El error se solucionó determinando que era solo si el click derecho se realiza sobre la terminal de windows donde se ejecuta, si es en cualquier otro lugar funciona bien.</li>
+</ul>
+</li>
+<li>Realizar cambios al anteproyecto para que quedé listo para mañana.</li>
+</ol>
+<h3 id="fecha-miercoles-7-de-febrero"><a name="user-content-fecha-miercoles-7-de-febrero" href="#fecha-miercoles-7-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Miércoles 7 de febrero</h3>
+<ol>
+<li>Empece a realizar cambios en el proyecto de ReseachLogger.<br />
+    Necesito arreglar necesariamente el como se toman las imágenes de la herramienta para que me sea más fácil la captura de elementos dentro de las imágenes por lo que voy a hacer es ver el código por encima para ver que funcionalidades son necesarias y cuales no.<ul>
+<li>Empece con las constantes</li>
+<li>La funcionalidad de agregar scroll podría ser interesante.</li>
+<li>Existe posibilidad de agregar ruta donde el usuario este trabajando.</li>
+<li>Existe posibilidad de agregar status del proceso, ej: running </li>
+</ul>
+</li>
+</ol>
+<p>Empece a ver todo el código y me esta costando entender algunas cosas. tiene muchas clases dentro de los archivos y hay muchas funciones repetidas dentro del código, me estoy frustrando un poco, estoy viendo otras posibilidades. Estoy llegando a pensar que tal vez es mejor empezar hacerla desde cero.</p>
+<ol>
+<li>Reunion de seguimiento con Paula. </li>
+</ol>
+<h3 id="fecha-jueves-8-de-febrero"><a name="user-content-fecha-jueves-8-de-febrero" href="#fecha-jueves-8-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Jueves 8 de febrero</h3>
+<ol>
+<li>
+<p>Pienso en hacer otro ResearchLogger con solo la biblioteca pynput. </p>
+</li>
+<li>
+<p>Realice un mapeo de todos los archivos que debo tocar para realizar los cambios.</p>
+<ul>
+<li>constantes.py</li>
+<li>detailLogWritter.py</li>
+<li>onClickImageCapture.py</li>
+<li>pyxhook.py</li>
+<li>ResearchLogger.py</li>
+<li>timedScreenshot.py</li>
+</ul>
+</li>
+<li>
+<p>No se que hacer pero voy a seguir.</p>
+</li>
+</ol>
+<h3 id="fecha-viernes-9-de-febrero"><a name="user-content-fecha-viernes-9-de-febrero" href="#fecha-viernes-9-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Viernes 9 de febrero</h3>
+<ol>
+<li>Reunión de seguimiento con Aurelio</li>
+<li>Reunión con Paula.</li>
+</ol>
+<p>Lo que voy a empezar hacer es hacer pequeños cambios de algunas funcionalidades y ir testando si todavía a pesar de los cambios la herramienta Reseach logger sigue funcionando con normalidad.</p>
+<ol>
+<li>Empece realizando cambios para obtener el process_name y verifique los logs para ver si todo sigue bien.</li>
+<li>Lo del process_name no anda bien. Lo estoy probando dentro de la herramienta pero a la hora de verificar en el log no se esta mostrando nada. </li>
+</ol>
+<h3 id="fecha-lunes-12-y-martes-13-de-febrero"><a name="user-content-fecha-lunes-12-y-martes-13-de-febrero" href="#fecha-lunes-12-y-martes-13-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Lunes 12 y martes 13 de febrero</h3>
+<p>FERIADO</p>
+<h3 id="fecha-miercoles-14-de-febrero"><a name="user-content-fecha-miercoles-14-de-febrero" href="#fecha-miercoles-14-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Miércoles 14 de febrero</h3>
+<ol>
+<li>Estoy realizando un documento que resume lo que he hecho por semana en las semanas anteriores.</li>
+<li>Reunion con Aurelio.</li>
+<li>La reunión me aclaro mucho las ideas ya que me volvió a poner en claro que es lo que debo hacer y cual es mi objetivo en este proyecto.</li>
+</ol>
+<h3 id="fecha-jueves-15-de-febrero"><a name="user-content-fecha-jueves-15-de-febrero" href="#fecha-jueves-15-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Jueves 15 de febrero</h3>
+<p>Hoy voy a testear la toma de screenshots en la Herramienta<br />
+    Cambie la biblioteca de tomar los screenshot por pyautogui uso lo mismo que la biblioteca anterior pero esta tiene una mayor compatibilidad con la biblioteca cv2 por lo que me va ayudar más cuando tenga que hacer procesamiento de imágenes.</p>
+<h3 id="fecha-viernes-16-de-febrero"><a name="user-content-fecha-viernes-16-de-febrero" href="#fecha-viernes-16-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Viernes 16 de febrero</h3>
+<ol>
+<li>
+<p>Estoy tratando de asegurar de que todas las imágenes que se tomen, su respectivo x,y quede dentro del cropbox. El asegurarlo se me esta haciendo difícil ya que depende del lugar donde se tome queda fuera de la pantalla. Quiero no cambiar todo el código que ya se tiene para esta funcionalidad trató de reutilizarlo.<br />
+Voy a tratar de buscar una biblioteca que lo haga.</p>
+</li>
+<li>
+<p>Cree el archivo saveimage.py<br />
+    La idea detrás de este script es poder hacer un caso de prueba donde yo pueda tener a partir de un x,y que yo establezca tomar el respectivo screnshot y un cropbox del mismo tratando de simular lo que ocurre en la herramienta pero sin tener que correr las otras funcionalidades de la herramienta y otros errores que no nos interesan.</p>
+</li>
+</ol>
+<h3 id="fecha-lunes-19-de-febrero"><a name="user-content-fecha-lunes-19-de-febrero" href="#fecha-lunes-19-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Lunes 19 de febrero</h3>
+<ol>
+<li>Hoy voy a cambiar para que las capturas completas de pantalla se hagan con la nueva biblioteca.</li>
+<li>Las capturas de pantalla(pantalla total) están listas.</li>
+<li>Los procesos no se van a poder cambiar a este formato, El problema es que el evento no trae el id o el proceso actual por lo que no encuentro una manera de hacer este proceso genérico para que funcione multiplataforma.</li>
+</ol>
+<pre><code>p = psutil.Process(os.getpid())
+p.name()
+
+</code></pre>
+
+<h3 id="fecha-martes-20-de-febrero"><a name="user-content-fecha-martes-20-de-febrero" href="#fecha-martes-20-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Martes 20 de febrero</h3>
+<ol>
+<li>Hoy termine de modificar todas las funciones de las imágenes, las imágenes ya están perfectas para empezar analizarlas.</li>
+<li>Realice modificaciones al saveimage.py</li>
+</ol>
+<p>Voy a dejar hasta acá los cambios del research logger y voy a empezar con el análisis de las imágenes porque siento que me estoy atrasando un poco. si queda tiempo realizo los respectivos cambios.</p>
+<h3 id="fecha-miercoles-21-de-febrero"><a name="user-content-fecha-miercoles-21-de-febrero" href="#fecha-miercoles-21-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Miércoles 21 de febrero</h3>
+<ol>
+<li>
+<p>Reunión con Paula y con los demás compañeros analizamos en conjunto los problemas que teníamos cada uno y nos hacíamos sugerencias.</p>
+</li>
+<li>
+<p>Tuve una conversación con Paula y le dije sobre que me iba a enfocar en lo de las imágenes, que iba a dejar un poco de lado lo de agregar nuevas funcionalidades y fijamos un nuevo norte.</p>
+</li>
+</ol>
+<p>Hablamos sobre los paper y dijimos lo que pensábamos hacer en las próximas semanas ya que Paula no va a estar en el país.</p>
+<p>NECESITO SABER EN QUE ÁMBITO PUEDE SER BUENO ENFOCAR MI INVESTIGACIÓN<br />
+    * Buscar plagio</p>
+<ol>
+<li>Le dije a paula que necesitaba ir conociendo las actividades que realizaba Laura para sacar información observando las imágenes.<ul>
+<li>Me dio un borrador de la tesis que esta realizando Laura para ser master en traductología</li>
+</ul>
+</li>
+</ol>
+<h3 id="fecha-jueves-22-de-febrero"><a name="user-content-fecha-jueves-22-de-febrero" href="#fecha-jueves-22-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Jueves 22 de febrero</h3>
+<ol>
+<li>
+<p>Hoy me voy a dedicar a leer la tesis de Laura</p>
+</li>
+<li>
+<p>Cosas importantes de la tesis</p>
+<ul>
+<li>Es muy importante el uso de la herramienta OmegaT<ul>
+<li>cuenta con 10 pasos que todo traductor necesita hacer dentro de esta herramienta se podría utilizar el análisis de imágenes para reconocer estos pasos.</li>
+<li>Reconocer cuando trabaja en LibreOffice writter</li>
+<li>Reconocimiento de archivos (puede ser también la extención ej: .png, .jpg, etc.)</li>
+<li>Es importante los 18 screenshots de análisis </li>
+<li>Lograr saber cuando un usuario se da cuenta de un error y lo corrige</li>
+<li>Encontrar segmentos sin traducir dentro de la herramienta(figura 31 muestra 2)</li>
+<li>Verificación de etiquetas (vendría siendo parte de los pasos)</li>
+<li>Crear documentos finales</li>
+<li>Activación del glosario (screenshot)</li>
+<li>Activar coincidencias parciales (screenshot)</li>
+<li>Activar Diccionario (screenshot)</li>
+<li>Subrayado de texto</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Le ayude con algunas funcionalidades a Walter</p>
+<ul>
+<li>Verificar que las flechas funcionen correctamente en Linux</li>
+<li>Que el &ldquo;tab&rdquo; se captado por la herramienta</li>
+</ul>
+</li>
+</ol>
+<h3 id="fecha-viernes-23-de-febrero"><a name="user-content-fecha-viernes-23-de-febrero" href="#fecha-viernes-23-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: viernes 23 de febrero</h3>
+<p>Detección de objetos</p>
+<p>Existen tres procedimientos principales en el análisis de BLOB:<br />
+1. Extracción: En esta parte del procesamiento se encuentran los pixeles conectados entre si osea pixeles vecinos que coinciden con las especificaciones, para lograrlo usualmente se utilizan algoritmos como el algoritmo Grass-Fire Recursivo o el algoritmo Grass-Fire Secuencial</p>
+<ol>
+<li>
+<p>Representación: Es la de representar las características de los pixeles que hemos extraído anteriormente, esto se hace por medio de números que indica la cantidad de características y luego puede ser comparado por medio de un método para asegurarse de que cumple con las características propuestas, por ejemplo si es un rectángulo, los pixeles deben representar cuatro lineas intercontectadas, dos paralelas entre si horizontalmente y dos paralelas entre si verticalmente.</p>
+</li>
+<li>
+<p>Clasificación: Se compara directamente con un prototipo para verificar que realmente concuerda con las características que queremos filtrar, por ejemplo en el caso anterior compararíamos los pixeles con un conjunto de pixeles que representan un rectángulo.</p>
+</li>
+</ol>
+<p><a href="https://www.pyimagesearch.com/2015/09/07/blur-detection-with-opencv/">https://www.pyimagesearch.com/2015/09/07/blur-detection-with-opencv/</a><br />
+<a href="https://planetachatbot.com/introducci%C3%B3n-a-la-detecci%C3%B3n-de-objetos-con-python-y-simplecv-ccbbe33a5bc4">https://planetachatbot.com/introducci%C3%B3n-a-la-detecci%C3%B3n-de-objetos-con-python-y-simplecv-ccbbe33a5bc4</a></p>
+<p>Estoy realizando pruebas para entender como puedo solucionar el problema de seleccionar el centro como región de interés y si a la hora de analizar toda la imagen se puede seleccionar que analice solo una parte de la imagen.</p>
+<h3 id="fecha-lunes-26-de-febrero"><a name="user-content-fecha-lunes-26-de-febrero" href="#fecha-lunes-26-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Lunes 26 de febrero</h3>
+<p>Hoy estoy tratando de resolver como identificar que dio click sobre un menú y sobre que parte del menú hizo click.</p>
+<ol>
+<li>
+<p>Estoy realizando el script textDetect.</p>
+<ul>
+<li>Quiero intentar detectar solo los objetos del centro de la imagen</li>
+<li>Estoy realizando diferentes funciones con diferentes contornos y kernels para poder observar cual me sirve mejor.</li>
+</ul>
+</li>
+<li>
+<p>Puedo tener la región de interés con:<br />
+cv2.selectROI(im) # esta debe ser con un humano</p>
+</li>
+<li>
+<p>ya puedo tener todos los objetos que hay en una imagen</p>
+</li>
+</ol>
+<h3 id="fecha-martes-27-de-febrero"><a name="user-content-fecha-martes-27-de-febrero" href="#fecha-martes-27-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Martes 27 de febrero</h3>
+<p>Desde el día de ayer estuve viendo como enfocarme en la parte central de la imagen, ya que como es acá donde esta el click es la zona donde voy analizar para identificar que voy hacer.<br />
+    * Estaba realizando una extracción de la parte central(forma de rectángulo) pero esta no me servia me parecía extraño que me estuviera ocurriendo eso.<br />
+    El problema era el siguiente:<br />
+    En la función yo me encontraba realizando el orden de parametros de esta forma </p>
+<pre><code>
+    (x1,y1),(x2,y2)
+
+    pero realmente era 
+
+    (y1:y2),(x1:x2)
+
+</code></pre>
+
+<p>El orden cambiaba&hellip; creo que estaba demasiado estresado&hellip; :(</p>
+<p>Mi otra teoría de hoy es comprobar si se puede sacar de una imagen por algún color en especifico.<br />
+    * Observe que esta teoria no me funcionaba si lo hacia con el color que yo necesitaba. Creo que solo sirve con el color rojo,azul,amarillo y gris.</p>
+<h3 id="fecha-miercoles-28-de-febrero"><a name="user-content-fecha-miercoles-28-de-febrero" href="#fecha-miercoles-28-de-febrero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Miércoles 28 de febrero</h3>
+<ol>
+<li>Posibles Soluciones:<ul>
+<li>Sikuli <a href="http://www.sikuli.org/">http://www.sikuli.org/</a></li>
+<li>Scikit-image  <a href="http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_blob.html">http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_blob.html</a></li>
+<li>Blob análisis:<ul>
+<li>Bounding box of a blob is the minimum</li>
+<li>object detection using blob tracing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Reunión con Aurelio.</li>
+</ol>
+<h3 id="fecha-jueves-1-de-marzo"><a name="user-content-fecha-jueves-1-de-marzo" href="#fecha-jueves-1-de-marzo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fecha: Jueves 1 de marzo</h3>
+<ol>
+<li>En la reunión de ayer con Aurelio me dijo que era muy necesario realizar mis informes de avances por lo que hoy decidí empezar hacer todos los informes desde que inicie mi proyecto.</li>
+<li>Realizó algunos cambios en mi bitácora.</li>
+<li>Voy hacer una carpeta en google drive donde voy a ir haciendo cada informe de avance.</li>
+</ol></article></body></html>
