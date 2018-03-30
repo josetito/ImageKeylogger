@@ -523,8 +523,8 @@ channels = cv.text.computeNMChannels(img)
 ### Fecha: Jueves 8 de marzo
 
 1. Tuve la reunión con Paula y discutimos la posibilidad de hacer diferente lo de la extraccion de las imagenes.
-    * Lo primero es que se va hacer una primera parte donde se va hacer una prueba en la que el script va a tener la asistencia de un humano para la deteccion de las zonas de interes
-    * Segunda parte sin asistencia que se logren detectar automaticamente.
+    * Lo primero es que se va hacer una primera parte donde se va hacer una prueba en la que el script va a tener la asistencia de un humano para la detección de las zonas de interés
+    * Segunda parte sin asistencia que se logren detectar automáticamente.
 
 2. Instalando el paquete gtk, yo puse el parametro -y lo que hizo fue eliminar muchos paquetes y la máquina dejo de funcionar.
     * La máquina se quedo sin internet por lo que fue dificil de arreglar.
@@ -602,7 +602,7 @@ nuevoMod = "cat "+file+" | cut -f8 -d'|' | tr ' ' '\n' | sed '/^$/d' | paste -s 
 
 3. Aplique los nuevos cambios a selectBox.py la que es asistida.
 
-4. De un total de 38 imágenes tomadas se encuentran en el archivo untotal de 34
+4. De un total de 38 imágenes tomadas se encuentran en el archivo un total de 34
 
 
 ### fecha Jueves 15 de marzo
@@ -625,7 +625,7 @@ imagenOriginal - imagenCambio = imagenDiferencia
 1. Estoy tratando de agregarle tesseract a lo logrado el viernes pero no se porque no esta funcionando.
 
 
-2. Voy a explorar algun otro modo de extraer el texto. 
+2. Voy a explorar algún otro modo de extraer el texto. 
 
 3. Voy a probar textract
 http://textract.readthedocs.io/en/stable/installation.html
@@ -634,7 +634,7 @@ http://textract.readthedocs.io/en/stable/installation.html
 sudo pip install pyocr
 https://github.com/openpaperwork/pyocr
 
-### fecha Lunes 20 de marzo
+### fecha Martes 20 de marzo
 
 1. instale el lang español
 '''
@@ -643,7 +643,231 @@ https://github.com/openpaperwork/pyocr
 2. instalar ingles
 '''
  sudo apt-get install tesseract-ocr-eng
+
 '''
+3. Reunion con paula, le dije lo que habia hecho.
+
+### fecha Miércoles 21 de marzo
+
+1. El problema de la no extraccion de texto con tesseract se debia a que la herramienta esta especializada para que el texto venga de color negro y lo demas este blanco. Estas condiciones no se estaban dando en la imagen por lo que le era imposible dar un resultado.
+
+2. Cuando hago uso del dilate y erode tengo que tener especial cuidado ya que si las letras son muy pequeñas esto podria hacer que se vea peor de lo que ya esta. 
+
+3. Realice pruebas para mejorar por medio de un procesamiento de la imagen de modo que permita ser más clara para la extracción del texto de una imagen.
+
+4. Encontre esta funcion cv2.bitwise_not(thresh) lo que me ayuda es cuando estoy procesando las imagenes me pasa el negro a blanco, y lo blanco a negro. Con esto tengo mejores resultados a la hora de aplicar tesseract.
+
+### fecha Jueves 22 de marzo
+
+1. Dado que no estoy teniendo como resultado una buena extraccion de texto se me ocurrió una idea:
+    * Vamos a mandar los datos a un excel, de manera que se pueda visualizar tanto la imagen como el texto extraído por tesseract.
+
+
+### fecha Viernes 23 de marzo
+
+cumpleaños de Randall
+
+
+### fecha Lunes 26 de marzo
+
+1. Estoy haciendo los documentos de avance de la semana 7,8 y 9.
+
+2. Voy a poner a correr un algoritmo de clasificación: https://github.com/llvll/imgcluster 
+    * instalación
+    sudo pip install numpy scipy scikit-learn
+    sudo pip install -U scikit-image
+    sudo pip install pyssim
+
+
+### fecha Martes 27 de marzo
+
+1. Estoy probando el imgcluster con el demo para ver los resultados:
+'''
+Building the similarity matrix using SIFT algorithm for 20 images
+Done - total calculation time: 97 seconds
+
+Performance metrics for Spectral Clustering
+Number of clusters: 4
+Silhouette coefficient: -0.77
+Completeness score: 0.19
+Homogeneity score: 0.18
+
+Performance metrics for Affinity Propagation Clustering
+Number of clusters: 3
+Silhouette coefficient: -0.66
+Completeness score: 0.13
+Homogeneity score: 0.10
+
+Selected Affinity Propagation for the labeling results
+
+ --- Images from cluster #0 ---
+3
+Image field-of-poppies.jpg
+5
+Image sailing-ship.jpg
+8
+Image macbook.jpg
+11
+Image iphone.jpg
+16
+Image fox.jpg
+17
+Image poppies.jpg
+18
+Image ferry-boat.jpg
+19
+Image sea.jpg
+
+ --- Images from cluster #1 ---
+1
+Image yacht.jpg
+4
+Image yacht-copy.jpg
+13
+Image bear.jpg
+
+ --- Images from cluster #2 ---
+0
+Image office.jpg
+2
+Image raccoon.jpg
+6
+Image wanderer.jpg
+7
+Image mobile.jpg
+9
+Image bike.jpg
+10
+Image freerider.jpg
+12
+Image winter.jpg
+14
+Image wolf.jpg
+15
+Image imac.jpg
+
+
+
+
+
+
+Agregando copia de dos imagenes más
+Building the similarity matrix using SIFT algorithm for 22 images
+Done - total calculation time: 108 seconds
+
+Performance metrics for Spectral Clustering
+Number of clusters: 4
+Silhouette coefficient: -0.77
+Homogeneity score: 0.32
+Completeness score: 0.34
+
+Performance metrics for Affinity Propagation Clustering
+Number of clusters: 3
+Silhouette coefficient: -0.44
+Homogeneity score: 0.18
+Completeness score: 0.22
+
+Selected Affinity Propagation for the labeling results
+
+ --- Images from cluster #0 ---
+0
+Image office.jpg
+1
+Image yacht.jpg
+4
+Image yacht-copy.jpg
+5
+Image sailing-ship.jpg
+13
+Image office (copy).jpg
+14
+Image winter.jpg
+15
+Image bear.jpg
+17
+Image imac.jpg
+20
+Image ferry-boat.jpg
+
+ --- Images from cluster #1 ---
+3
+Image field-of-poppies.jpg
+6
+Image iphone (copy).jpg
+9
+Image macbook.jpg
+12
+Image iphone.jpg
+18
+Image fox.jpg
+19
+Image poppies.jpg
+21
+Image sea.jpg
+
+ --- Images from cluster #2 ---
+2
+Image raccoon.jpg
+7
+Image wanderer.jpg
+8
+Image mobile.jpg
+10
+Image bike.jpg
+11
+Image freerider.jpg
+16
+Image wolf.jpg
+
+'''
+
+2. Voy hacer un set de imagenes de prueba con mis imagenes para someterlas a prueba en este cluster
+
+el set me quedo de 198 imágenes
+
+Prueba:
+Building the similarity matrix using SIFT algorithm for 198 images
+Done - total calculation time: 6484 seconds
+error..........
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Función para cambiar
+
+   def capture_image(self, event):
+        #screensize width heigth
+        screensize = self.get_screen_size()
+
+        #Position x,y
+        x = event.Position[0]
+        y = event.Position[1]
+
+        #take the highest point left and the lowest point right. (to form a rectangle cropbox)
+        x1 = x - (screensize.x / 4)
+        x2 = x + (screensize.x / 4)
+        y1 = y - (screensize.y / 4)
+        y2 = y + (screensize.y / 4)
+
+        #width and height
+        w = x2 - x1
+        h = y2 - y1
+
+        #take a cropbox
+        image_data = pyautogui.screenshot(region=((x1,y1, w, h)))
+
+        return image_data
+
 
 
 links:
