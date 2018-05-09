@@ -832,9 +832,51 @@ error..........
 
 
 
+### fecha Jueves 12 de abril
+
+1. Volvimos a Costa Rica, y tuvimos algunas reuniones con aurelio, kevin y diego. Para tratar temas de como iban a funcionar las cosas.
+
+Con Aurelio:
+- Sobre los documentos que debemos presentar 
+- Realizar una presentación sobre el proyecto y experiencia para centro Alajuela
+
+Kevin:
+- Necesidad de equipo para continuar con el proyecto
+
+Diego: 
+- Necesidad de prestamo de alumnos para la toma de datos.
 
 
+### fecha viernes 13 de abril
 
+1. Empece con la instalacion de ubuntu a la computadora.
+
+2. Instalación de los programas necesarios(pycharm, sublime,...)
+
+3. Descargar el proyecto e github (Researchlogger,imageKeylogger)
+
+4. Instalacion de los requerimientos para el proyecto
+
+5. ResearchLogger ya se encuentra funcionando
+
+
+### fecha lunes 16 de abril
+
+Estuve pensando en que el proyecto se encuentra en la parte de pos-procesamiento por lo que voy a integrarlo con el Reseach Analizer ya que tambien voy hacer uso de algunas de las funciones que ya se encuentran en este proyecto.
+
+El proyecto quedo completamente montado en Research Analizer
+
+
+### fecha martes 17 de abril 
+
+1. Realize el archivo images_interpreter el cual se va a encargar de la interpretacion de todas las imagenes.
+
+2. La solución A que es la del subrayado dentro de las imagenes, realice un archivo image_underline que es el que estoy trabajando.
+
+
+### fecha miércoles 18 de abril 
+
+1. Empece a trabajar en la revision de Research Logger para windows pero tengo un problema con el driver de wifi por lo que lo voy a dejar para despues
 
 
 
